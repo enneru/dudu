@@ -16,7 +16,7 @@ def run_command(input):
     for x in servers:
         subprocess.run([input, x])
 
-commandOverride = input("input command to override default:\n")
+commandOverride = input("input command to override default:\n(leave blank for default)\n")
 if not commandOverride:
     print(f"executing default command: {command}")
     run_command(command)

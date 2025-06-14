@@ -12,8 +12,9 @@ servers = []
 conf = open("config")
 username = conf.readline()
 for x in conf:
-
-    servers.append(x.strip())
+    x = x.strip()
+    if x not in servers:
+        servers.append(x)
 conf.close()
 
 #command arg / command to distribute to servers
